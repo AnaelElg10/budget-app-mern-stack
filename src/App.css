@@ -1,38 +1,103 @@
-.App {
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #0f0f1f;
+  color: #ddd;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
   text-align: center;
+  color: #fff;
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 span {
+  font-size: 1rem;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 7px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form input, form select {
+  width: 100%;
+  background-color: transparent;
+  color: #ddd;
+  border: 2px solid #30313d;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+form input[type="datetime-local"] {
+  color: #777;
+}
+
+form button {
+  width: 100%;
+  margin-top: 5px;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #00aaff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #0088cc;
+}
+
+div.transactions {
+  margin-top: 20px;
+}
+
+div.transaction {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid #30313d;
 }
 
-.App-link {
-  color: #61dafb;
+div.transaction:first-child {
+  border-top: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.transaction div.name {
+  font-size: 1rem;
+  color: #fff;
+}
+
+div.transaction div.description {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+div.right {
+  text-align: right;
+}
+
+div.price.green {
+  color: #1c1;
+}
+
+div.price.red {
+  color: #c11;
+}
+
+div.transaction div.datetime {
+  font-size: 0.7rem;
+  color: #888;
 }
